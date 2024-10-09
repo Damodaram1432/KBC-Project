@@ -1,0 +1,113 @@
+from tkinter import *
+from tkinter import messagebox
+def comm1():
+    name=entry1.get()
+    def show_msg():
+        messagebox.showinfo("wrong answer")
+    label2=Label(root,text="1.Who is known as the father of Python ?",font=('arial',15))
+    label2.place(x=500,y=130)
+    button2a=Button(root,text='A.James Gosling',font=("Arial",15),command=show_msg)
+    button2a.place(x=520,y=165)
+
+    def comm2():
+        def show_msg1():
+            messagebox.showinfo("wrong answer")
+        label3 = Label(root, text="2.In which year was the Python language developed ?", font=('arial', 15))
+        label3.place(x=500, y=130)
+        button3a = Button(root, text='A.1956', font=("Arial", 15),command=show_msg1)
+        button3a.place(x=520, y=165)
+        button3b = Button(root, text='B.1967', font=("Arial", 15),command=show_msg1)
+        button3b.place(x=650, y=165)
+
+        def comm3():
+            def show_msg2():
+                messagebox.showinfo("wrong answer")
+            label4 = Label(root, text="1.Which are even numbers ?", font=('arial', 15))
+            label4.place(x=500, y=130)
+            button4a = Button(root, text='A.0,1,2,3', font=("Arial", 15),command=show_msg2)
+            button4a.place(x=520, y=165)
+
+            def comm4():
+                def show_msg3():
+                    messagebox.showinfo("wrong answer")
+                label5 = Label(root, text="4.Which are the odd numbers ?", font=('arial', 15))
+                label5.place(x=500, y=130)
+                button5a = Button(root, text='A.0,1,4,5', font=("Arial", 15),command=show_msg3)
+                button5a.place(x=520, y=165)
+                button5b = Button(root, text='B.2,4,6,8', font=("Arial", 15),command=show_msg3)
+                button5b.place(x=650, y=165)
+
+                def comm5():
+                    def show_msg4():
+                        messagebox.showinfo("wrong answer")
+                    def show_msg5():
+                        messagebox.showinfo("congratulations you completed the task")
+                    label6 = Label(root, text="5.Who invented ReactJS?", font=('arial', 15))
+                    label6.place(x=500, y=130)
+                    button6a= Button(root, text='A.Jordan Walke', font=("Arial", 15),command=show_msg5)
+                    button6a.place(x=510, y=165)
+                    button6b = Button(root, text='B.Guido Van Rossum', font=("Arial", 15),command=show_msg4)
+                    button6b.place(x=690, y=165)
+                    button6c = Button(root, text='C.James Gosling', font=("Arial", 15),command=show_msg4)
+                    button6c.place(x=510, y=210)
+                    button6d = Button(root, text='D.Dennis Ritchie', font=("Arial", 15),command=show_msg4)
+                    button6d.place(x=690, y=210)
+                    label5.destroy()
+                    button5a.destroy()
+                    button5b.destroy()
+                    button5c.destroy()
+                    button5d.destroy()
+                button5c= Button(root, text='C.1,3,5,7', font=("Arial", 15),command=comm5)
+                button5c.place(x=520, y=210)
+                button5d= Button(root, text='D.0,2,4,6', font=("Arial", 15),command=show_msg3)
+                button5d.place(x=650, y=210)
+                label4.destroy()
+                button4a.destroy()
+                button4b.destroy()
+                button4c.destroy()
+                button4d.destroy()
+            button4b = Button(root, text='B.2,4,6,8', font=("Arial", 15),command=comm4)
+            button4b.place(x=650, y=165)
+            button4c= Button(root, text='C.2,3,5,7,', font=("Arial", 15),command=show_msg2)
+            button4c.place(x=520, y=210)
+            button4d = Button(root, text='D.0,-1,-2,-3', font=("Arial", 15),command=show_msg2)
+            button4d.place(x=650, y=210)
+            label3.destroy()
+            button3a.destroy()
+            button3b.destroy()
+            button3c.destroy()
+            button3d.destroy()
+        button3c = Button(root, text='C.1989', font=("Arial", 15),command=comm3)
+        button3c.place(x=520, y=210)
+        button3d = Button(root, text='D.1999', font=("Arial", 15),command=show_msg1)
+        button3d.place(x=650, y=210)
+        label2.destroy()
+        button2a.destroy()
+        button2b.destroy()
+        button2c.destroy()
+        button2d.destroy()
+    button2b= Button(root, text='B.Guido Van Rossum', font=("Arial", 15),command=comm2)
+    button2b.place(x=700, y=165)
+    button2c= Button(root, text='C.Dennis Ritchie', font=("Arial", 15),command=show_msg)
+    button2c.place(x=520, y=210)
+    button2d= Button(root, text='D.Jordan Walke', font=("Arial", 15),command=show_msg)
+    button2d.place(x=700, y=210)
+
+    label_t.destroy()
+    label1.destroy()
+    entry1.destroy()
+    button1.destroy()
+
+root=Tk()
+root.title('Indroyds Assingment')
+root['bg']='dark blue'
+count=0
+label_t=Label(root,text='Quiz',font=('Arial',25),bg="dark blue")
+label_t.place(x=600,y=10)
+label1=Label(root,text='username :',font=('Arial',16) ,bg="dark blue")
+label1.place(x=450,y=120)
+entry1=Entry(root,font=('arial',15))
+entry1.place(x=600,y=120)
+button1=Button(root,text="Login",font=('Ariel',15),command=comm1)
+button1.place(x=600,y=180)
+root.mainloop()
